@@ -4,13 +4,13 @@ import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 import { IncorrectEmailOrPasswordError } from "./IncorrectEmailOrPasswordError";
 
+import user from "../../../../../tests/mock/newUser-valid"
+
 let usersRepositoryInMemory: IUsersRepository;
 let createUserUseCase: CreateUserUseCase;
 let authenticateUserUseCase: AuthenticateUserUseCase;
 
-const  email = "test@finapi.com";
-const  name = "Test Tester Testudo";
-const password = "testing";
+const { name, email, password } = user;
 
 describe("On authenticating an user...", () => {
   beforeEach(async () => {
