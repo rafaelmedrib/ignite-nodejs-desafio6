@@ -24,7 +24,7 @@ describe("On requesting login", () => {
 
   it("should be able to use valid credentials and retrieve a token and the user info", async () => {
     const response = await request(app).post("/api/v1/sessions").send({ email, password });
-    console.log(response.body.token);
+    
     expect(response.statusCode).toBe(200);
     expect(response.body).toHaveProperty("token");
   });
