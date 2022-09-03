@@ -53,7 +53,6 @@ describe("On requesting for statement operation info", () => {
       await request(app)
         .get(`/api/v1/statements/${wrongStatementId}`)
         .set("Authorization", authorizationHeader);
-    console.log(statement.body);
     expect(statement.statusCode).toBe(404);
   })
 })

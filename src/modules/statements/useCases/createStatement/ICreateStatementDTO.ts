@@ -7,4 +7,11 @@ Pick<
   'description' |
   'amount' |
   'type'
+> | Pick<
+  Statement,
+  'sender_id' |
+  'user_id' |
+  'description' |
+  'amount' |
+  'type'
 >
